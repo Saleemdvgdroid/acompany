@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import {Container,Row,Col} from 'react-bootstrap'
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from './components/Header';
@@ -7,8 +7,16 @@ import About from './components/About';
 import Offerings from './components/Offerings';
 import Product from './components/Product';
 import Services from './components/Services';
+import SplashScreen from './components/SplashScreen';
 
 function App() {
+    const [showSplash,hideSplash] = useState(true);
+   
+    if(showSplash){
+        return(
+            <SplashScreen showHome = {()=>hideSplash(false)} />
+        )
+    }
     return (
             <div>
             <Header/>

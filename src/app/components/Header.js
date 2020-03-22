@@ -3,9 +3,9 @@ import {Navbar,Nav} from 'react-bootstrap'
 import Styles from '../styles/header.css'
 function Header() {
     return (
-        <Navbar collapseOnSelect sticky = {'top'} expand="lg" bg="light" variant="light">
-            <Navbar.Brand href="#home" style = {Style.titleLine}>
-                <img src= {require("../Images/logo.png")}/>
+        <Navbar collapseOnSelect sticky = {'top'} expand="lg" bg="dark" variant="dark">
+            <Navbar.Brand href="" style = {Style.titleLine}>
+                <img height = {30} src= {require("../Images/logo.png")}/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -33,10 +33,9 @@ const Style = {
     },
     titleLine:{
         marginLeft:'1.5%',
-        padding:10,
-        fontSize:28,
-        fontWeight:'800',
-        color:'white',
+        paddingLeft:10,
+        paddingTop:5,
+        paddingBottom:5,
         backgroundColor: 'rgb(98 161 217)'
     },
     tagLine:{
